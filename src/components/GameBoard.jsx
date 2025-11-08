@@ -25,7 +25,10 @@ function GameBoard({ secretPhrase, onGameEnd }) {
 
   const handleSpin = async () => {
     try {
-      const response = await fetch('/api/spin');
+      const response = await fetch('/api/spin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
       const data = await response.json();
       setCurrentSpinValue(data.value);
       showMessage(`You spun: Rp ${data.value.toLocaleString()}! Now guess a consonant.`, 'info');

@@ -5,7 +5,7 @@ A fun, interactive Wheel of Fortune-inspired web game for couples! Spin the whee
 ## 🎮 Game Overview
 
 **Wheel of Love** is a browser-based game where your girlfriend can:
-- Spin a colorful wheel to get random values (1k-50k Rupiah)
+- Spin a colorful wheel to get random values (customizable by host)
 - Guess consonant letters to reveal a secret phrase
 - Purchase vowels using accumulated points
 - Try to solve the full phrase for bonus points
@@ -13,7 +13,7 @@ A fun, interactive Wheel of Fortune-inspired web game for couples! Spin the whee
 
 ## 🎯 Game Rules
 
-1. **Spin the Wheel**: Get a random value between Rp 1,000 and Rp 50,000
+1. **Spin the Wheel**: Get a random value based on weighted probabilities
 2. **Guess Consonants**: 
    - ✅ Correct guess → ADD the spun value to your score
    - ❌ Wrong guess → SUBTRACT the spun value from your score
@@ -26,6 +26,16 @@ A fun, interactive Wheel of Fortune-inspired web game for couples! Spin the whee
 5. **Final Score** = Your Shopee Budget! 🛍️
 
 ## 🚀 Getting Started
+
+### Platform-Specific Setup Guides
+
+Choose your operating system for detailed setup instructions from scratch:
+
+- 🐧 **[Linux Setup Guide](docs/SETUP-LINUX.md)** - Ubuntu, Debian, Fedora, Arch, and more
+- 🪟 **[Windows Setup Guide](docs/SETUP-WINDOWS.md)** - Windows 10, 11, and comprehensive troubleshooting
+- 🍎 **[macOS Setup Guide](docs/SETUP-MACOS.md)** - Complete guide for Mac users
+
+### Quick Start (If you already have Node.js)
 
 ### Prerequisites
 
@@ -76,7 +86,13 @@ npm run client
 
 1. Open the game at `http://localhost:5173`
 2. Enter a secret phrase in the input field (e.g., "I LOVE YOU SO MUCH")
-3. Click **"Start Game"** to begin
+3. **Choose your wheel configuration:**
+   - **Use Default Wheel**: Standard settings with balanced probabilities
+   - **Customize Wheel**: Set your own values and weights
+     - Add or remove values
+     - Adjust weights (lower weight = rarer value)
+     - Preview the probability distribution
+4. Click **"Start Game"** to begin
 
 ### For the Player (Your Girlfriend):
 
@@ -96,6 +112,8 @@ npm run client
 - 🔊 **Visual feedback** for spins, correct/wrong guesses
 - 📱 **Responsive design** that works on laptops and tablets
 - 🎊 **Celebration screen** showing final Shopee budget
+- ⚙️ **Customizable wheel values and weights** - Host can control the game difficulty
+- 🎲 **Weighted random selection** - Rare values are harder to get
 
 ## 🛠️ Technology Stack
 
@@ -135,10 +153,10 @@ shopee-fortune-wheel/
 
 ### Easy Modifications:
 
-1. **Change wheel values**: Edit `backend/server.js` line 11
+1. **Change wheel values and weights**: Use the built-in customization UI in the host setup screen
 2. **Modify colors**: Update CSS gradient values in component CSS files
 3. **Add sound effects**: Include audio files and play on events
-4. **Change vowel pricing**: Edit `GameBoard.jsx` line 18
+4. **Change vowel pricing**: Edit `GameBoard.jsx` line 19
 
 ### Future Enhancements:
 
