@@ -2,6 +2,8 @@
 
 A fun, interactive Wheel of Fortune-inspired web game for couples! Spin the wheel, guess letters, and win your Shopee shopping budget!
 
+**🌐 Live Demo:** [Play Now on GitHub Pages](https://hasyimap.github.io/shopee-fortune-wheel/)
+
 ## 🎮 Game Overview
 
 **Wheel of Love** is a browser-based game where your girlfriend can:
@@ -30,29 +32,21 @@ A fun, interactive Wheel of Fortune-inspired web game for couples! Spin the whee
 
 ## 🚀 Getting Started
 
-### Platform-Specific Setup Guides
+### Play Online (Easiest!)
 
-Choose your operating system for detailed setup instructions from scratch:
+Just visit the live demo: **[https://hasyimap.github.io/shopee-fortune-wheel/](https://hasyimap.github.io/shopee-fortune-wheel/)**
 
-- 🐧 **[Linux Setup Guide](docs/SETUP-LINUX.md)** - Ubuntu, Debian, Fedora, Arch, and more
-- 🪟 **[Windows Setup Guide](docs/SETUP-WINDOWS.md)** - Windows 10, 11, and comprehensive troubleshooting
-- 🍎 **[macOS Setup Guide](docs/SETUP-MACOS.md)** - Complete guide for Mac users
+No installation needed! Works on any device with a modern web browser.
 
-### Production Deployment
+### Run Locally (For Development)
 
-For deploying to a production Linux server:
-
-- 🚀 **[Linux Server Deployment Guide](docs/DEPLOYMENT-LINUX.md)** - Complete production deployment with Nginx, PM2, SSL, and monitoring
-
-### Quick Start (If you already have Node.js)
-
-### Prerequisites
+#### Prerequisites
 
 Make sure you have **Node.js** installed on your laptop:
 - Download from: https://nodejs.org/ (LTS version recommended)
 - Check installation: `node --version` and `npm --version`
 
-### Installation
+#### Installation
 
 1. **Clone or download this repository**:
    ```bash
@@ -65,29 +59,16 @@ Make sure you have **Node.js** installed on your laptop:
    npm install
    ```
 
-### Running the Application
+#### Running the Application
 
-**Start both frontend and backend together**:
+**Start the development server**:
 ```bash
 npm run dev
 ```
 
 This will:
-- Start the Express backend server on `http://localhost:3000`
-- Start the Vite frontend dev server on `http://localhost:5173`
+- Start the Vite development server on `http://localhost:5173`
 - Open your browser automatically to `http://localhost:5173`
-
-### Alternative: Run Frontend and Backend Separately
-
-**Terminal 1 - Backend Server**:
-```bash
-npm run server
-```
-
-**Terminal 2 - Frontend**:
-```bash
-npm run client
-```
 
 ## 📖 How to Play
 
@@ -136,21 +117,15 @@ npm run client
 
 ## 🛠️ Technology Stack
 
-### Frontend:
 - **React 18** - UI framework
 - **Vite** - Fast build tool and dev server
 - **CSS3** - Styling with animations
-
-### Backend:
-- **Node.js** - JavaScript runtime
-- **Express** - Web server framework
+- **GitHub Pages** - Static hosting
 
 ## 📁 Project Structure
 
 ```
 shopee-fortune-wheel/
-├── backend/
-│   └── server.js          # Express backend server
 ├── src/
 │   ├── components/
 │   │   ├── HostSetup.jsx      # Initial setup screen
@@ -159,9 +134,14 @@ shopee-fortune-wheel/
 │   │   ├── PhraseBoard.jsx    # Letter display board
 │   │   ├── FinalSummary.jsx   # End game summary
 │   │   └── *.css              # Component styles
+│   ├── utils/
+│   │   └── wheelLogic.js      # Wheel spinning logic
 │   ├── App.jsx            # Main app component
 │   ├── main.jsx           # React entry point
 │   └── index.css          # Global styles
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions deployment
 ├── index.html             # HTML template
 ├── package.json           # Dependencies and scripts
 ├── vite.config.js         # Vite configuration
@@ -183,24 +163,32 @@ shopee-fortune-wheel/
 - 🎵 Add real sound effects (wheel spin, ding for correct, buzz for wrong)
 - 💾 Add localStorage to save high scores
 - 🎨 Integrate Tailwind CSS for easier styling
-- 🌐 Deploy to Vercel/Netlify for online play (or use the [deployment guide](docs/DEPLOYMENT-LINUX.md) for your own server)
 - 📊 Add statistics and game history
 - 🎭 Multiple phrase categories
 - ⏱️ Add timer for extra challenge
 
-## 🐛 Troubleshooting
+## 🚀 Deployment
 
-### Port already in use
-If you see "Port 3000 already in use":
+This app is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+
+### Manual Deployment
+
+To deploy manually:
+
 ```bash
-# Find and kill the process using port 3000
-# On Windows:
-netstat -ano | findstr :3000
-taskkill /PID [PID_NUMBER] /F
-
-# On Mac/Linux:
-lsof -ti:3000 | xargs kill
+npm run deploy
 ```
+
+This will build the app and deploy it to the `gh-pages` branch.
+
+### GitHub Pages Setup
+
+1. Go to your repository settings
+2. Navigate to "Pages" in the left sidebar
+3. Under "Source", select "GitHub Actions"
+4. The app will be automatically deployed on every push to the main branch
+
+## 🐛 Troubleshooting
 
 ### Dependencies not installing
 ```bash

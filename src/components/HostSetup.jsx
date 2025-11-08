@@ -1,43 +1,18 @@
 import { useState, useEffect } from 'react';
 import './HostSetup.css';
+import { DEFAULT_WHEEL_CONFIG } from '../utils/wheelLogic';
 
 function HostSetup({ onStart }) {
   const [phrase, setPhrase] = useState('');
   const [useCustomWheel, setUseCustomWheel] = useState(false);
-  const [wheelConfig, setWheelConfig] = useState([]);
-  const [defaultConfig, setDefaultConfig] = useState([]);
+  const [wheelConfig, setWheelConfig] = useState(DEFAULT_WHEEL_CONFIG);
   const [vowelPrice, setVowelPrice] = useState(5000);
   const [bonusPerLetter, setBonusPerLetter] = useState(5000);
-
-  useEffect(() => {
-    // Load default configuration
-    fetch('/api/wheel-config/default')
-      .then(res => res.json())
-      .then(data => {
-        setDefaultConfig(data.config);
-        setWheelConfig(data.config);
-      })
-      .catch(err => console.error('Error loading default config:', err));
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (phrase.trim()) {
-      // Set wheel configuration before starting the game
-      try {
-        await fetch('/api/wheel-config', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            useDefault: !useCustomWheel,
-            config: useCustomWheel ? wheelConfig : undefined
-          })
-        });
-        onStart(phrase.trim(), vowelPrice, bonusPerLetter);
-      } catch (error) {
-        console.error('Error setting wheel config:', error);
-        alert('Error configuring the wheel. Please try again.');
-      }
+      onStart(phrase.trim(), vowelPrice, bonusPerLetter, useCustomWheel ? wheelConfig : DEFAULT_WHEEL_CONFIG);
     }
   };
 
@@ -57,7 +32,7 @@ function HostSetup({ onStart }) {
   };
 
   const resetToDefault = () => {
-    setWheelConfig(defaultConfig);
+    setWheelConfig(DEFAULT_WHEEL_CONFIG);
   };
 
   return (

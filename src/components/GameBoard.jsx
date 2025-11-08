@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import './GameBoard.css';
 import Wheel from './Wheel';
 import PhraseBoard from './PhraseBoard';
+import { getWeightedRandomValue } from '../utils/wheelLogic';
 
-function GameBoard({ secretPhrase, onGameEnd, vowelPrice = 5000, bonusPerLetter = 5000 }) {
+function GameBoard({ secretPhrase, onGameEnd, vowelPrice = 5000, bonusPerLetter = 5000, wheelConfig }) {
   const [score, setScore] = useState(0);
   const [guessedLetters, setGuessedLetters] = useState(new Set());
   const [currentSpinValue, setCurrentSpinValue] = useState(0);
@@ -25,13 +26,9 @@ function GameBoard({ secretPhrase, onGameEnd, vowelPrice = 5000, bonusPerLetter 
 
   const handleSpin = async () => {
     try {
-      const response = await fetch('/api/spin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
-      });
-      const data = await response.json();
-      setCurrentSpinValue(data.value);
-      showMessage(`You spun: Rp ${data.value.toLocaleString()}! Now guess a consonant.`, 'info');
+      const randomValue = getWeightedRandomValue(wheelConfig);
+      setCurrentSpinValue(randomValue);
+      showMessage(`You spun: Rp ${randomValue.toLocaleString()}! Now guess a consonant.`, 'info');
     } catch (error) {
       showMessage('Error spinning the wheel. Please try again.', 'error');
     }

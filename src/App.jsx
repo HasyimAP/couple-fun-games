@@ -3,6 +3,7 @@ import './App.css';
 import HostSetup from './components/HostSetup';
 import GameBoard from './components/GameBoard';
 import FinalSummary from './components/FinalSummary';
+import { DEFAULT_WHEEL_CONFIG } from './utils/wheelLogic';
 
 function App() {
   const [gameState, setGameState] = useState('setup'); // setup, playing, finished
@@ -11,12 +12,14 @@ function App() {
   const [vowelPrice, setVowelPrice] = useState(5000);
   const [bonusPerLetter, setBonusPerLetter] = useState(5000);
   const [bonusDetails, setBonusDetails] = useState(null);
+  const [wheelConfig, setWheelConfig] = useState(DEFAULT_WHEEL_CONFIG);
 
-  const startGame = (phrase, vowelPriceConfig, bonusPerLetterConfig) => {
+  const startGame = (phrase, vowelPriceConfig, bonusPerLetterConfig, wheelConfigParam) => {
     setSecretPhrase(phrase.toUpperCase());
     setScore(0);
     setVowelPrice(vowelPriceConfig || 5000);
     setBonusPerLetter(bonusPerLetterConfig || 5000);
+    setWheelConfig(wheelConfigParam || DEFAULT_WHEEL_CONFIG);
     setBonusDetails(null);
     setGameState('playing');
   };
@@ -34,6 +37,7 @@ function App() {
     setVowelPrice(5000);
     setBonusPerLetter(5000);
     setBonusDetails(null);
+    setWheelConfig(DEFAULT_WHEEL_CONFIG);
   };
 
   return (
@@ -45,6 +49,7 @@ function App() {
           onGameEnd={endGame}
           vowelPrice={vowelPrice}
           bonusPerLetter={bonusPerLetter}
+          wheelConfig={wheelConfig}
         />
       )}
       {gameState === 'finished' && (
