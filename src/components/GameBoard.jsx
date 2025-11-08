@@ -107,25 +107,22 @@ function GameBoard({ secretPhrase, onGameEnd, vowelPrice = 5000, bonusPerLetter 
     const cleanedPhrase = secretPhrase.trim().replace(/\s+/g, ' ');
 
     if (cleanedGuess === cleanedPhrase) {
-      // Count remaining hidden consonants
-      const uniqueConsonants = new Set(
-        secretPhrase.split('').filter(char => consonants.has(char))
+      // Count remaining hidden letters (both consonants and vowels)
+      const uniqueLetters = new Set(
+        secretPhrase.split('').filter(char => consonants.has(char) || vowels.has(char))
       );
-      const revealedConsonants = new Set(
-        [...guessedLetters].filter(char => consonants.has(char))
+      const hiddenLettersList = [...uniqueLetters].filter(
+        letter => !guessedLetters.has(letter)
       );
-      const hiddenConsonantsList = [...uniqueConsonants].filter(
-        c => !revealedConsonants.has(c)
-      );
-      const hiddenConsonantsCount = hiddenConsonantsList.length;
+      const hiddenLettersCount = hiddenLettersList.length;
       
-      const bonus = hiddenConsonantsCount * bonusPerLetter;
+      const bonus = hiddenLettersCount * bonusPerLetter;
       const finalScore = score + bonus;
       setScore(finalScore);
       
       const bonusInfo = {
-        hiddenConsonantsCount,
-        hiddenConsonantsList,
+        hiddenLettersCount,
+        hiddenLettersList,
         bonusPerLetter,
         totalBonus: bonus,
         scoreBeforeBonus: score

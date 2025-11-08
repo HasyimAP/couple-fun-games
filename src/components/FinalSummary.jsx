@@ -18,9 +18,9 @@ function FinalSummary({ score, onRestart, bonusDetails }) {
             <h3>🎁 Bonus Details</h3>
             <div className="bonus-info">
               <p><strong>Score before bonus:</strong> Rp {bonusDetails.scoreBeforeBonus.toLocaleString()}</p>
-              <p><strong>Unguessed letters count:</strong> {bonusDetails.hiddenConsonantsCount}</p>
-              {bonusDetails.hiddenConsonantsCount > 0 && (
-                <p><strong>Unguessed letters:</strong> {bonusDetails.hiddenConsonantsList.join(', ')}</p>
+              <p><strong>Unguessed letters count:</strong> {bonusDetails.hiddenLettersCount}</p>
+              {bonusDetails.hiddenLettersCount > 0 && (
+                <p><strong>Unguessed letters:</strong> {bonusDetails.hiddenLettersList.join(', ')}</p>
               )}
               <p><strong>Bonus per letter:</strong> Rp {bonusDetails.bonusPerLetter.toLocaleString()}</p>
               <p className="total-bonus"><strong>Total bonus:</strong> Rp {bonusDetails.totalBonus.toLocaleString()}</p>
