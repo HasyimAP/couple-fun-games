@@ -18,10 +18,13 @@ A fun, interactive Wheel of Fortune-inspired web game for couples! Spin the whee
    - ✅ Correct guess → ADD the spun value to your score
    - ❌ Wrong guess → SUBTRACT the spun value from your score
 3. **Buy Vowels**: 
-   - First vowel costs Rp 5,000
-   - Each subsequent vowel costs Rp 5,000 more (5k, 10k, 15k, 20k, 25k)
+   - Cost increases with each purchase (1x, 2x, 3x, etc. of the initial vowel price)
+   - Default: First vowel costs Rp 5,000, second Rp 10,000, third Rp 15,000...
+   - The host can adjust the initial vowel price
 4. **Solve the Phrase**:
-   - ✅ Correct answer → Get bonus (5k × remaining hidden consonants)
+   - ✅ Correct answer → Get bonus for each unguessed letter (default: 5k per letter)
+   - The game shows exactly how many letters you didn't guess and the total bonus
+   - The host can adjust the bonus per letter
    - ❌ Wrong answer → LOSE HALF your score
 5. **Final Score** = Your Shopee Budget! 🛍️
 
@@ -34,6 +37,12 @@ Choose your operating system for detailed setup instructions from scratch:
 - 🐧 **[Linux Setup Guide](docs/SETUP-LINUX.md)** - Ubuntu, Debian, Fedora, Arch, and more
 - 🪟 **[Windows Setup Guide](docs/SETUP-WINDOWS.md)** - Windows 10, 11, and comprehensive troubleshooting
 - 🍎 **[macOS Setup Guide](docs/SETUP-MACOS.md)** - Complete guide for Mac users
+
+### Production Deployment
+
+For deploying to a production Linux server:
+
+- 🚀 **[Linux Server Deployment Guide](docs/DEPLOYMENT-LINUX.md)** - Complete production deployment with Nginx, PM2, SSL, and monitoring
 
 ### Quick Start (If you already have Node.js)
 
@@ -92,7 +101,11 @@ npm run client
      - Add or remove values
      - Adjust weights (lower weight = rarer value)
      - Preview the probability distribution
-4. Click **"Start Game"** to begin
+4. **Configure game settings:**
+   - **Initial Vowel Price**: Set the base cost for vowels (default: 5,000)
+     - Each subsequent vowel costs 2x, 3x, 4x, etc. of this amount
+   - **Bonus per Unguessed Letter**: Set reward for each letter not guessed when solving correctly (default: 5,000)
+5. Click **"Start Game"** to begin
 
 ### For the Player (Your Girlfriend):
 
@@ -102,7 +115,10 @@ npm run client
    - **Buy a vowel** (A, E, I, O, U) - if you have enough money
    - **Guess the full phrase** - risky but can win big!
 3. Keep playing until you solve the phrase
-4. See your final Shopee budget!
+4. See your final Shopee budget with detailed bonus breakdown!
+   - View how many letters you didn't guess
+   - See which letters those were
+   - Check your bonus calculation
 
 ## 🎨 Features
 
@@ -111,9 +127,12 @@ npm run client
 - 💰 **Real-time score tracking** with clear visual feedback
 - 🔊 **Visual feedback** for spins, correct/wrong guesses
 - 📱 **Responsive design** that works on laptops and tablets
-- 🎊 **Celebration screen** showing final Shopee budget
+- 🎊 **Celebration screen** showing final Shopee budget with detailed bonus breakdown
 - ⚙️ **Customizable wheel values and weights** - Host can control the game difficulty
 - 🎲 **Weighted random selection** - Rare values are harder to get
+- 💵 **Adjustable vowel pricing** - Host can set initial vowel price (increases multiplicatively)
+- 🎁 **Configurable bonus points** - Host can customize bonus per unguessed letter
+- 📊 **Detailed bonus information** - See exactly what letters weren't guessed and total bonus earned
 
 ## 🛠️ Technology Stack
 
@@ -154,16 +173,17 @@ shopee-fortune-wheel/
 ### Easy Modifications:
 
 1. **Change wheel values and weights**: Use the built-in customization UI in the host setup screen
-2. **Modify colors**: Update CSS gradient values in component CSS files
-3. **Add sound effects**: Include audio files and play on events
-4. **Change vowel pricing**: Edit `GameBoard.jsx` line 19
+2. **Adjust vowel pricing**: Use the initial vowel price setting in the host setup screen
+3. **Modify bonus points**: Use the bonus per letter setting in the host setup screen
+4. **Modify colors**: Update CSS gradient values in component CSS files
+5. **Add sound effects**: Include audio files and play on events
 
 ### Future Enhancements:
 
 - 🎵 Add real sound effects (wheel spin, ding for correct, buzz for wrong)
 - 💾 Add localStorage to save high scores
 - 🎨 Integrate Tailwind CSS for easier styling
-- 🌐 Deploy to Vercel/Netlify for online play
+- 🌐 Deploy to Vercel/Netlify for online play (or use the [deployment guide](docs/DEPLOYMENT-LINUX.md) for your own server)
 - 📊 Add statistics and game history
 - 🎭 Multiple phrase categories
 - ⏱️ Add timer for extra challenge
