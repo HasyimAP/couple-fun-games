@@ -12,6 +12,12 @@ function Homepage({ onSelectGame }) {
       name: t.homepage.shopeeFortuneWheel.name,
       description: t.homepage.shopeeFortuneWheel.description,
       emoji: '🎡'
+    },
+    {
+      id: 'talkdeck',
+      name: t.homepage.talkDeck.name,
+      description: t.homepage.talkDeck.description,
+      emoji: '💬'
     }
   ];
 

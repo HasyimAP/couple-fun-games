@@ -8,6 +8,10 @@ export const id = {
     shopeeFortuneWheel: {
       name: 'Roda Keberuntungan Shopee',
       description: 'Putar roda, tebak huruf, dan menangkan budget belanja Anda! Game seru yang terinspirasi dari Wheel of Fortune.'
+    },
+    talkDeck: {
+      name: 'TalkDeck',
+      description: 'Percakapan mendalam dimulai dari sini. Balik kartu untuk menemukan pertanyaan tentang cinta, mimpi, dan segala hal di antaranya.'
     }
   },
 
@@ -157,5 +161,128 @@ export const id = {
     spun: '✅ Sudah Diputar!',
     spinWheel: '🎯 Putar Roda!',
     sound: '🔊 Wheeeee!'
+  },
+
+  // TalkDeck
+  talkDeck: {
+    title: '💬 TalkDeck 💕',
+    subtitle: 'Percakapan mendalam, satu kartu sekaligus',
+    tapToFlip: 'Ketuk untuk melihat pertanyaan',
+    questionsRemaining: 'Pertanyaan tersisa',
+    instructions: 'Ketuk kartu untuk melihat pemicu percakapan. Ketuk lagi untuk pertanyaan baru!',
+    backToHome: '🏠 Kembali ke Beranda',
+    questions: [
+      // Romantis (20 pertanyaan)
+      'Kapan momen kamu menyadari kamu punya perasaan padaku?',
+      'Apa kenangan favoritmu tentang kita berdua?',
+      'Menurutmu bagaimana hubungan kita berkembang sejak pertama bertemu?',
+      'Hal kecil apa yang aku lakukan yang membuatmu merasa dicintai?',
+      'Apa satu hal tentang hubungan kita yang membuatmu tersenyum?',
+      'Kapan kamu merasa paling terhubung denganku?',
+      'Apa cara favoritmu untuk menghabiskan waktu berkualitas bersama?',
+      'Apa hal romantis yang pernah aku lakukan yang tidak akan pernah kamu lupakan?',
+      'Bagaimana kamu ingin dihibur saat merasa sedih?',
+      'Lagu apa yang mengingatkanmu pada kita dan mengapa?',
+      'Apa satu mimpi yang kamu miliki untuk masa depan kita bersama?',
+      'Apa hadiah paling bijaksana yang pernah aku berikan padamu?',
+      'Bagaimana perasaanmu saat kita berpisah untuk waktu yang lama?',
+      'Menurutmu seperti apa kencan malam yang sempurna?',
+      'Apa yang membuatmu merasa paling dihargai dalam hubungan kita?',
+      'Jika kamu bisa menggambarkan cinta kita dalam tiga kata, apa itu?',
+      'Tradisi apa yang ingin kamu mulai bersama kita?',
+      'Apa satu hal yang aku lakukan yang selalu membuat jantungmu berdebar?',
+      'Bagaimana berada denganku mengubahmu sebagai pribadi?',
+      'Apa hal favoritmu yang aku katakan padamu?',
+
+      // Serius (20 pertanyaan)
+      'Apa ketakutan terbesarmu tentang masa depan?',
+      'Bagaimana kamu menangani stres dan apa yang bisa aku lakukan untuk mendukungmu?',
+      'Apa yang sedang kamu perjuangkan yang belum kamu ceritakan padaku?',
+      'Apa nilai-nilai intimu dan bagaimana mereka memandu hidupmu?',
+      'Bagaimana kamu mendefinisikan kesuksesan dalam hidup?',
+      'Apa pelajaran terpenting yang hidup ajarkan padamu?',
+      'Bagaimana pendapatmu tentang keseimbangan kerja-kehidupan?',
+      'Bagaimana perasaanmu tentang posisi kita dalam hidup saat ini?',
+      'Apa yang kamu harap orang lain lebih memahami tentang dirimu?',
+      'Apa arti komitmen bagimu?',
+      'Bagaimana kamu ingin tumbuh sebagai pribadi dalam tahun depan?',
+      'Apa ketidakamananmu yang terbesar dan bagaimana aku bisa membantu?',
+      'Bagaimana perasaanmu tentang kompromi dalam hubungan?',
+      'Apa pendapatmu tentang memiliki anak?',
+      'Apa arti stabilitas finansial bagimu?',
+      'Bagaimana kamu menangani konflik dalam hubungan?',
+      'Peran apa yang keluarga mainkan dalam hidupmu?',
+      'Apa pendapatmu tentang ruang pribadi dalam hubungan?',
+      'Seberapa penting kesuksesan karir bagimu?',
+      'Warisan apa yang ingin kamu tinggalkan?',
+
+      // Lucu (20 pertanyaan)
+      'Jika kamu hanya bisa makan satu makanan seumur hidup, apa itu?',
+      'Apa hal paling memalukan yang pernah terjadi padamu?',
+      'Jika kamu seorang superhero, apa kekuatan super yang tidak berguna?',
+      'Apa mimpi paling aneh yang pernah kamu alami?',
+      'Jika hewan bisa bicara, mana yang paling kasar?',
+      'Apa ketakutan paling irasionalmu?',
+      'Jika kamu bisa bertukar hidup dengan karakter fiksi mana pun, siapa itu?',
+      'Apa pilihan fashion terburuk yang pernah kamu buat?',
+      'Jika kamu harus menghapus semua kecuali tiga aplikasi dari ponselmu, mana yang akan kamu simpan?',
+      'Apa guilty pleasure-mu yang membuatmu malu?',
+      'Jika kamu bisa makan malam dengan tiga orang, hidup atau mati, siapa mereka?',
+      'Apa julukan paling lucu yang pernah kamu miliki?',
+      'Jika kamu adalah alat dapur, apa itu dan mengapa?',
+      'Apa argumen paling konyol yang pernah kita miliki?',
+      'Jika kamu bisa mengganti namamu, nama apa yang akan kamu pilih?',
+      'Apa pendapat paling tidak populermu?',
+      'Jika kamu bisa terkenal karena sesuatu, apa itu?',
+      'Apa hal paling konyol yang kamu percayai saat kecil?',
+      'Jika kamu tidak terlihat selama sehari, apa yang akan kamu lakukan?',
+      'Apa lagu karaoke andalanmu?',
+
+      // Bermimpi (20 pertanyaan)
+      'Jika kamu bisa tinggal di mana saja di dunia, di mana itu?',
+      'Apa liburan impianmu?',
+      'Jika uang bukan masalah, apa yang akan kamu lakukan dengan hidupmu?',
+      'Seperti apa hari sempurnamu dari awal hingga akhir?',
+      'Jika kamu bisa menguasai keterampilan apa pun secara instan, apa itu?',
+      'Petualangan apa yang ingin kita lakukan bersama?',
+      'Jika kamu bisa mendesain rumah impian kita, seperti apa itu?',
+      'Apa yang ada di bucket list-mu yang ingin kamu lakukan bersama?',
+      'Jika kamu bisa melakukan perjalanan waktu, era mana yang akan kamu kunjungi?',
+      'Kehidupan seperti apa yang kamu bayangkan untuk kita dalam 10 tahun?',
+      'Jika kamu bisa bangun besok dengan karir apa pun, apa itu?',
+      'Apa hobi yang selalu ingin kamu coba bersama?',
+      'Jika kita bisa pindah ke negara mana pun, mana yang akan kamu pilih?',
+      'Seperti apa pensiun dalam mimpimu?',
+      'Jika kamu bisa punya konser pribadi dari artis mana pun, siapa itu?',
+      'Dunia fantasi apa yang ingin kamu tinggali selama seminggu?',
+      'Jika kamu bisa memiliki jenis bisnis apa pun, apa itu?',
+      'Apa tujuan yang ingin kamu dukung atau mulai?',
+      'Jika kamu bisa mempelajari jawaban untuk pertanyaan apa pun, apa yang akan kamu tanyakan?',
+      'Pengalaman apa yang ingin kamu miliki sebelum kamu mati?',
+
+      // Tentang Masa Depan (10 pertanyaan)
+      'Di mana kamu melihat dirimu dalam 5 tahun?',
+      'Tujuan apa yang ingin kamu capai dalam tahun depan?',
+      'Bagaimana kamu membayangkan kehidupan kita bersama akan berkembang?',
+      'Menurutmu seperti apa orang tua yang akan kamu jadi?',
+      'Perubahan apa yang ingin kamu buat dalam hidupmu?',
+      'Bagaimana kamu ingin merayakan pencapaian masa depan kita?',
+      'Apa yang paling membuatmu bersemangat tentang masa depan kita?',
+      'Rumah seperti apa yang ingin kita ciptakan bersama?',
+      'Bagaimana kamu membayangkan kita menua bersama?',
+      'Tradisi apa yang ingin kamu wariskan ke generasi mendatang?',
+
+      // Tentang Masa Lalu (10 pertanyaan)
+      'Apa kenangan masa kecilmu yang paling favorit?',
+      'Siapa cinta pertamamu dan apa yang terjadi?',
+      'Apa dari masa lalumu yang membentuk siapa dirimu hari ini?',
+      'Apa nasihat terbaik yang pernah kamu terima?',
+      'Momen apa dari masa lalumu yang ingin kamu alami kembali?',
+      'Apa kesalahan terbesarmu dan apa yang kamu pelajari darinya?',
+      'Siapa sahabatmu saat tumbuh dan seperti apa mereka?',
+      'Apa yang kamu percayai saat kecil yang ternyata salah?',
+      'Tradisi keluarga apa yang kamu miliki yang kamu sukai?',
+      'Pencapaian apa dari masa lalumu yang paling membanggakan?'
+    ]
   }
 };

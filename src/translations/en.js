@@ -8,6 +8,10 @@ export const en = {
     shopeeFortuneWheel: {
       name: 'Shopee Fortune Wheel',
       description: 'Spin the wheel, guess letters, and win your shopping budget! A fun Wheel of Fortune-inspired game.'
+    },
+    talkDeck: {
+      name: 'TalkDeck',
+      description: 'Deep conversations start here. Flip cards to discover questions about love, dreams, and everything in between.'
     }
   },
 
@@ -157,5 +161,128 @@ export const en = {
     spun: '✅ Spun!',
     spinWheel: '🎯 Spin the Wheel!',
     sound: '🔊 Wheeeee!'
+  },
+
+  // TalkDeck
+  talkDeck: {
+    title: '💬 TalkDeck 💕',
+    subtitle: 'Deep conversations, one card at a time',
+    tapToFlip: 'Tap to reveal a question',
+    questionsRemaining: 'Questions remaining',
+    instructions: 'Tap the card to reveal a conversation starter. Tap again for a new question!',
+    backToHome: '🏠 Back to Home',
+    questions: [
+      // Romantic (20 questions)
+      'What was the moment you knew you had feelings for me?',
+      'What\'s your favorite memory of us together?',
+      'How do you think our relationship has grown since we first met?',
+      'What small thing do I do that makes you feel loved?',
+      'What\'s one thing about our relationship that makes you smile?',
+      'When do you feel most connected to me?',
+      'What\'s your favorite way to spend quality time together?',
+      'What\'s something romantic I\'ve done that you\'ll never forget?',
+      'How do you like to be comforted when you\'re feeling down?',
+      'What song reminds you of us and why?',
+      'What\'s one dream you have for our future together?',
+      'What\'s the most thoughtful gift I\'ve ever given you?',
+      'How do you feel when we\'re apart for a long time?',
+      'What\'s your idea of the perfect date night?',
+      'What makes you feel most appreciated in our relationship?',
+      'If you could describe our love in three words, what would they be?',
+      'What tradition would you like us to start together?',
+      'What\'s one thing I do that always makes your heart flutter?',
+      'How has being with me changed you as a person?',
+      'What\'s your favorite thing I say to you?',
+
+      // Serious (20 questions)
+      'What are your biggest fears about the future?',
+      'How do you handle stress and what can I do to support you?',
+      'What\'s something you\'re struggling with that you haven\'t told me?',
+      'What are your core values and how do they guide your life?',
+      'How do you define success in life?',
+      'What\'s the most important lesson life has taught you?',
+      'What are your thoughts on work-life balance?',
+      'How do you feel about where we are in life right now?',
+      'What\'s something you wish people understood better about you?',
+      'What does commitment mean to you?',
+      'How do you want to grow as a person in the next year?',
+      'What\'s your biggest insecurity and how can I help?',
+      'How do you feel about compromise in relationships?',
+      'What are your thoughts on having children?',
+      'What does financial stability mean to you?',
+      'How do you handle conflict in relationships?',
+      'What role does family play in your life?',
+      'What are your thoughts on personal space in a relationship?',
+      'How important is career success to you?',
+      'What legacy do you want to leave behind?',
+
+      // Funny (20 questions)
+      'If you could only eat one food for the rest of your life, what would it be?',
+      'What\'s the most embarrassing thing that\'s ever happened to you?',
+      'If you were a superhero, what would be your useless superpower?',
+      'What\'s the weirdest dream you\'ve ever had?',
+      'If animals could talk, which would be the rudest?',
+      'What\'s your most irrational fear?',
+      'If you could swap lives with any fictional character, who would it be?',
+      'What\'s the worst fashion choice you\'ve ever made?',
+      'If you had to delete all but three apps from your phone, which would you keep?',
+      'What\'s your guilty pleasure that you\'re embarrassed about?',
+      'If you could have dinner with any three people, dead or alive, who would they be?',
+      'What\'s the funniest nickname you\'ve ever had?',
+      'If you were a kitchen appliance, what would you be and why?',
+      'What\'s the most ridiculous argument we\'ve ever had?',
+      'If you could rename yourself, what name would you choose?',
+      'What\'s your most unpopular opinion?',
+      'If you could be famous for anything, what would it be?',
+      'What\'s the silliest thing you believed as a child?',
+      'If you were invisible for a day, what would you do?',
+      'What\'s your go-to karaoke song?',
+
+      // Dreamy (20 questions)
+      'If you could live anywhere in the world, where would it be?',
+      'What\'s your ultimate dream vacation?',
+      'If money was no object, what would you do with your life?',
+      'What does your perfect day look like from start to finish?',
+      'If you could master any skill instantly, what would it be?',
+      'What adventure do you want us to go on together?',
+      'If you could design our dream home, what would it look like?',
+      'What\'s on your bucket list that you want to do together?',
+      'If you could time travel, which era would you visit?',
+      'What kind of life do you envision for us in 10 years?',
+      'If you could wake up tomorrow with any career, what would it be?',
+      'What\'s a hobby you\'ve always wanted to try together?',
+      'If we could move to any country, where would you choose?',
+      'What does retirement look like in your dreams?',
+      'If you could have a private concert from any artist, who would it be?',
+      'What fantasy world would you want to live in for a week?',
+      'If you could own any type of business, what would it be?',
+      'What\'s a cause you dream of supporting or starting?',
+      'If you could learn the answer to any question, what would you ask?',
+      'What experience do you want to have before you die?',
+
+      // About Future (10 questions)
+      'Where do you see yourself in 5 years?',
+      'What goals do you want to achieve in the next year?',
+      'How do you imagine our life together will evolve?',
+      'What kind of parent do you think you\'ll be?',
+      'What changes do you want to make in your life?',
+      'How do you want to celebrate our future milestones?',
+      'What are you most excited about for our future?',
+      'What kind of home do you want us to create together?',
+      'How do you envision us growing old together?',
+      'What traditions do you want to pass down to future generations?',
+
+      // About Past (10 questions)
+      'What\'s your favorite childhood memory?',
+      'Who was your first crush and what happened?',
+      'What\'s something from your past that shaped who you are today?',
+      'What\'s the best advice you\'ve ever received?',
+      'What moment from your past do you wish you could relive?',
+      'What was your biggest mistake and what did you learn from it?',
+      'Who was your best friend growing up and what were they like?',
+      'What\'s something you believed as a child that turned out to be wrong?',
+      'What family tradition did you have that you loved?',
+      'What achievement from your past are you most proud of?'
+    ]
   }
 };

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Homepage from './components/Homepage';
 import ShopeeFortuneWheel from './components/ShopeeFortuneWheel';
+import TalkDeck from './components/TalkDeck';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import { LanguageProvider } from './contexts/LanguageContext';
 
@@ -26,6 +27,9 @@ function App() {
         {currentView === 'home' && <Homepage onSelectGame={handleSelectGame} />}
         {currentView === 'game' && selectedGame === 'shopee-fortune-wheel' && (
           <ShopeeFortuneWheel onBackToHome={handleBackToHome} />
+        )}
+        {currentView === 'game' && selectedGame === 'talkdeck' && (
+          <TalkDeck onBackToHome={handleBackToHome} />
         )}
       </div>
     </LanguageProvider>
