@@ -153,6 +153,12 @@ export const en = {
     indonesian: 'Indonesian'
   },
 
+  // Support Button
+  support: {
+    buttonText: '☕ Support Developer',
+    tooltip: 'Buy me a coffee!'
+  },
+
   // Wheel Component
   wheel: {
     youSpun: 'You spun!',

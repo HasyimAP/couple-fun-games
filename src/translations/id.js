@@ -153,6 +153,12 @@ export const id = {
     indonesian: 'Bahasa Indonesia'
   },
 
+  // Support Button
+  support: {
+    buttonText: '☕ Dukung Developer',
+    tooltip: 'Belikan saya kopi!'
+  },
+
   // Wheel Component
   wheel: {
     youSpun: 'Anda memutar!',

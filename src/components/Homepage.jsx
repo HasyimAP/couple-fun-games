@@ -1,6 +1,7 @@
 import './Homepage.css';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
+import SupportButton from './SupportButton';
 
 function Homepage({ onSelectGame }) {
   const { language } = useLanguage();
@@ -48,6 +49,7 @@ function Homepage({ onSelectGame }) {
           </div>
         </div>
       </div>
+      <SupportButton />
     </div>
   );
 }
