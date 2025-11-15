@@ -101,9 +101,11 @@ function TruthOrDare({ onBackToHome }) {
     // After spinning animation completes
     setTimeout(() => {
       // Determine result based on where wheel landed
-      // Wheel has 4 sections: Truth (0-90°), Dare (90-180°), Truth (180-270°), Dare (270-360°)
+      // Wheel sections (pointer at top):
+      // - Blue (Truth): 45-135° and 225-315°
+      // - Red (Dare): 0-45°, 135-225°, and 315-360°
       const finalAngle = totalRotation % 360;
-      const chosenResult = (finalAngle >= 0 && finalAngle < 90) || (finalAngle >= 180 && finalAngle < 270) 
+      const chosenResult = (finalAngle >= 45 && finalAngle < 135) || (finalAngle >= 225 && finalAngle < 315)
         ? 'truth' 
         : 'dare';
       
@@ -144,18 +146,10 @@ function TruthOrDare({ onBackToHome }) {
             className={`wheel ${isSpinning ? 'spinning' : ''}`}
             style={{ transform: `rotate(${wheelRotation}deg)` }}
           >
-            <div className="wheel-quarter truth-quarter-1">
-              <span className="wheel-text">Truth</span>
-            </div>
-            <div className="wheel-quarter dare-quarter-1">
-              <span className="wheel-text">Dare</span>
-            </div>
-            <div className="wheel-quarter truth-quarter-2">
-              <span className="wheel-text">Truth</span>
-            </div>
-            <div className="wheel-quarter dare-quarter-2">
-              <span className="wheel-text">Dare</span>
-            </div>
+            <div className="wheel-quarter truth-quarter-1"></div>
+            <div className="wheel-quarter dare-quarter-1"></div>
+            <div className="wheel-quarter truth-quarter-2"></div>
+            <div className="wheel-quarter dare-quarter-2"></div>
           </div>
         </div>
 
