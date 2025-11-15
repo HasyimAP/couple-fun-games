@@ -38,12 +38,17 @@ Learn about each game in detail:
   - How to play (host and player guides)
   - Features and customization options
   - Game strategy tips
+- **💬 TalkDeck** - Conversation game for couples (documentation coming soon)
+  - Curated conversation prompts
+  - Multiple categories and topics
+  - Multilingual support
 
 ## 🎮 Available Games
 
 Currently, the platform includes:
 
 1. **Shopee Fortune Wheel** - A fun, interactive Wheel of Fortune-inspired game where players spin a wheel, guess letters, and win shopping budgets!
+2. **TalkDeck** - An engaging conversation game designed to spark meaningful discussions between couples with curated prompts and questions.
 
 More games coming soon! 🚀
 
@@ -57,15 +62,26 @@ couple-fun-games/
 │   ├── components/
 │   │   ├── Homepage.jsx       # Main menu for game selection
 │   │   ├── ShopeeFortuneWheel.jsx  # Shopee game wrapper
+│   │   ├── TalkDeck.jsx       # TalkDeck conversation game
+│   │   ├── LanguageSwitcher.jsx    # Language toggle component
 │   │   ├── HostSetup.jsx      # Game setup screen
 │   │   ├── GameBoard.jsx      # Main game interface
 │   │   ├── Wheel.jsx          # Spinning wheel component
 │   │   ├── PhraseBoard.jsx    # Letter display board
 │   │   ├── FinalSummary.jsx   # End game summary
 │   │   └── *.css              # Component styles
+│   ├── contexts/
+│   │   └── LanguageContext.jsx # Language state management
+│   ├── translations/          # Language translation files
 │   ├── App.jsx                # Main app component
 │   ├── main.jsx               # React entry point
 │   └── index.css              # Global styles
+├── public/
+│   ├── favicon.png            # Web icon/favicon
+│   ├── robots.txt             # Search engine crawler rules
+│   └── sitemap.xml            # Site structure for SEO
+├── assets/
+│   └── web_icon.png           # Original web icon source
 ├── docs/
 │   ├── README.md              # This file
 │   ├── SETUP-WINDOWS.md       # Windows setup guide
@@ -75,7 +91,7 @@ couple-fun-games/
 │   ├── UPDATE-DEPLOYMENT.md   # Update deployment guide
 │   └── games/
 │       └── shopee-fortune-wheel.md  # Individual game docs
-├── index.html                 # HTML template
+├── index.html                 # HTML template with SEO meta tags
 ├── package.json               # Dependencies and scripts
 ├── vite.config.js             # Vite configuration
 └── README.md                  # Main project README
@@ -92,6 +108,26 @@ couple-fun-games/
 - **Node.js** - JavaScript runtime
 - **Express** - Web server framework for API endpoints
 - **CORS** - Cross-origin resource sharing support
+
+### SEO & Optimization:
+- **Meta Tags** - Comprehensive SEO meta tags including Open Graph and Twitter Card
+- **Sitemap** - XML sitemap for search engine crawling
+- **Robots.txt** - Search engine crawler directives
+- **Favicon** - Custom web icon for branding
+- **Google Analytics** - Traffic and usage analytics
+
+## 🔍 SEO Features
+
+The platform includes comprehensive SEO optimization:
+
+- **Meta Tags**: Title, description, keywords, author, and canonical URL
+- **Open Graph**: Optimized for sharing on Facebook, LinkedIn, and other social platforms
+- **Twitter Card**: Enhanced previews when shared on Twitter
+- **Sitemap**: XML sitemap at `/sitemap.xml` for search engine discovery
+- **Robots.txt**: Crawler directives at `/robots.txt` allowing all search engines
+- **Favicon**: Custom favicon and Apple touch icon using the web_icon.png
+- **Semantic HTML**: Proper HTML5 structure for better indexing
+- **Analytics**: Google Analytics integration for tracking and insights
 
 ## 🚀 Quick Reference
 

@@ -8,7 +8,7 @@ A collection of fun, interactive web games designed for couples to enjoy togethe
 
 ## 🎡 Available Games
 
-### Shopee Fortune Wheel
+### 🎰 Shopee Fortune Wheel
 A fun, interactive Wheel of Fortune-inspired game! Spin the wheel, guess letters, and win your Shopee shopping budget!
 
 **Game Features:**
@@ -19,6 +19,15 @@ A fun, interactive Wheel of Fortune-inspired game! Spin the wheel, guess letters
 - Final score becomes the Shopee shopping budget!
 
 **[📖 Full Game Documentation](docs/games/shopee-fortune-wheel.md)** - Detailed rules, strategies, and tips
+
+### 💬 TalkDeck
+An engaging conversation game designed to spark meaningful discussions between couples!
+
+**Game Features:**
+- Curated conversation prompts and questions
+- Different categories to explore various topics
+- Multilingual support (English and Indonesian)
+- Perfect for date nights and deeper connections
 
 More games coming soon! 🚀
 
@@ -99,6 +108,9 @@ npm run client
 - 📱 **Responsive Design** - Works on laptops, tablets, and mobile devices
 - 🎯 **Game-Specific Features** - Each game has its own unique mechanics and customization options
 - 🔄 **Seamless Switching** - Return to the homepage anytime to try different games
+- 🌍 **Multilingual Support** - Available in multiple languages (English, Indonesian)
+- 🔍 **SEO Optimized** - Enhanced discoverability with proper meta tags, sitemap, and robots.txt
+- 📊 **Analytics Integration** - Google Analytics for tracking usage and improvements
 
 ## 🛠️ Technology Stack
 
@@ -121,6 +133,8 @@ couple-fun-games/
 │   ├── components/
 │   │   ├── Homepage.jsx       # Main menu for game selection
 │   │   ├── ShopeeFortuneWheel.jsx  # Shopee game wrapper
+│   │   ├── TalkDeck.jsx       # TalkDeck conversation game
+│   │   ├── LanguageSwitcher.jsx    # Language toggle component
 │   │   ├── HostSetup.jsx      # Game setup screen
 │   │   ├── GameBoard.jsx      # Main game interface
 │   │   ├── Wheel.jsx          # Spinning wheel component
@@ -128,9 +142,18 @@ couple-fun-games/
 │   │   ├── FinalSummary.jsx   # End game summary
 │   │   ├── HelpModal.jsx      # Help and instructions
 │   │   └── *.css              # Component styles
+│   ├── contexts/
+│   │   └── LanguageContext.jsx # Language state management
+│   ├── translations/          # Language translation files
 │   ├── App.jsx                # Main app component
 │   ├── main.jsx               # React entry point
 │   └── index.css              # Global styles
+├── public/
+│   ├── favicon.png            # Web icon/favicon
+│   ├── robots.txt             # Search engine crawler rules
+│   └── sitemap.xml            # Site structure for SEO
+├── assets/
+│   └── web_icon.png           # Original web icon source
 ├── docs/
 │   ├── README.md              # Documentation index
 │   ├── SETUP-WINDOWS.md       # Windows setup guide
@@ -152,6 +175,26 @@ For comprehensive documentation, see:
 - **[Documentation Index](docs/README.md)** - Complete documentation overview
 - **[Setup Guides](docs/README.md#setup-guides)** - Platform-specific installation instructions
 - **[Individual Game Docs](docs/README.md#individual-game-documentation)** - Detailed game rules and features
+
+## 🔍 SEO & Web Optimization
+
+The platform includes comprehensive SEO optimization for better search engine discoverability:
+
+### Built-in SEO Features:
+- **Meta Tags**: Comprehensive meta tags including title, description, keywords, and author
+- **Open Graph Tags**: Optimized previews for Facebook, LinkedIn, and social media sharing
+- **Twitter Card**: Enhanced previews when shared on Twitter
+- **Robots.txt**: Search engine crawler directives at `/robots.txt` (allows all crawlers)
+- **Sitemap**: XML sitemap at `/sitemap.xml` for better indexing
+- **Favicon**: Custom web icon using the `web_icon.png` asset
+- **Semantic HTML**: Proper HTML5 structure for better crawling
+- **Analytics**: Google Analytics integration for tracking
+
+### For Deployment:
+When deploying to production, remember to:
+1. Update the domain name in `public/sitemap.xml` (replace `https://couplefungames.com/`)
+2. Update the domain name in `public/robots.txt` sitemap reference
+3. Verify all SEO files are accessible after deployment
 
 ## 🎨 Customization Ideas
 
