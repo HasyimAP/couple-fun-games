@@ -122,29 +122,6 @@
   transform: rotate(270deg);
 }
 
-.wheel-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-}
-
-.dare-quarter-1 .wheel-text,
-.dare-quarter-2 .wheel-text {
-  transform: translateX(-50%) rotate(-90deg);
-}
-
-.truth-quarter-2 .wheel-text {
-  transform: translateX(-50%) rotate(-180deg);
-}
-
 /* Spin Button */
 .spin-button {
   display: block;
@@ -303,10 +280,6 @@
     height: 250px;
   }
 
-  .wheel-text {
-    font-size: 1.5rem;
-  }
-
   .result-type {
     font-size: 1.5rem;
   }
@@ -325,10 +298,6 @@
   .wheel {
     width: 200px;
     height: 200px;
-  }
-
-  .wheel-text {
-    font-size: 1.2rem;
   }
 
   .truthordare-title {
