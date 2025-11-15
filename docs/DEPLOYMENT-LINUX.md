@@ -298,6 +298,20 @@ Open your browser and navigate to:
 
 You should see the Couple Fun Games application running!
 
+#### SEO Files Verification
+
+The build process automatically includes SEO-optimized files in the `dist` folder:
+- `robots.txt` - Search engine crawler directives (allows all search engines)
+- `sitemap.xml` - Site structure for search engine discovery
+- `favicon.png` - Custom web icon/favicon
+
+These files are served directly by Nginx from the `dist` directory. Verify they're accessible:
+- `http://your-domain.com/robots.txt`
+- `http://your-domain.com/sitemap.xml`
+- `http://your-domain.com/favicon.png`
+
+**Note**: Remember to update the domain URLs in `public/sitemap.xml` and `public/robots.txt` before building for production with your actual domain name.
+
 ## SSL/HTTPS Setup
 
 For production, always use HTTPS. We'll use Let's Encrypt (free SSL certificates).
